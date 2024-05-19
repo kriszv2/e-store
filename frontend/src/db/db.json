@@ -1,0 +1,10 @@
+{
+  "products": [
+    { "id": 1, "catId":1,"title": "Product 1" },
+    { "id": 2, "catId":1,"title": "Product 2" }
+  ],
+  "categories": [
+    { "id": 1,  "title": "Category 1" },
+    { "id": 2,  "title": "Category 2" }
+  ]
+}
