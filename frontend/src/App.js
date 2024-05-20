@@ -1,16 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
 import React,{useState} from "react";
-import Category from './components/Category';
-import { fetcher } from './fetcher';
+import Category from './components/category';
+import { getProducts, getCategories } from './fetcher';
+import Category_Products from './components/category_products';
 
 function App() {
-  const [categories, setCategories] = useState([])
-  const [products, setProducts] = useState([])
+  const [categories, setCategories] = useState({errorMessage: '', data: []})
+  const [products, setProducts] = useState({errorMessage: '', data: []})
 
   React.useEffect(() => {
     const fetchData = async () =>{
-      const data = await fetcher("/categories")
+      const data = await getCategories()
       setCategories(data)
     }
     
@@ -19,22 +19,20 @@ function App() {
   },[])
 
   const onClickHandler = id =>{
-   
-    fetch("http://localhost:3001/products?catId=" + id)
-      .then(response => response.json())
-      .then(data => {
-        console.log(data);
-
-        setProducts(data)
-    })
+   const fetchData = async () =>{
+    const data = await getProducts(id)
+    setProducts(data)
+   }
+        
+    fetchData()
   }
 const renderProducts = () =>{
-  return products.map(p => 
-    <div>{p.title}</div>
+  return products.data.map(p => 
+    <Category_Products key={p.id} id={p.id} title={p.title}/>
   )
 }
 const renderCategories = () => {
-  return categories.map(c =>
+  return categories.data.map(c =>
     <Category onCategoryClick={()=>onClickHandler(c.id)} key={c.id} id={c.id} title={c.title}/>
   )
 }
@@ -43,12 +41,14 @@ const renderCategories = () => {
     <header>My Store</header>
     <section>
       <nav>
-        
+        {categories.errorMessage && <div>Error: {categories.errorMessage}</div>}
         {categories && renderCategories()}
       
       </nav>
-      <article>
-        <h1>Products</h1>
+      <h1>Products</h1>
+      <article className='category-product-info-article'>
+        
+        {products.errorMessage && <div>Error: {products.errorMessage}</div>}
         {products && renderProducts()}
       </article>
     </section>
