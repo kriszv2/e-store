@@ -10,8 +10,8 @@
         "price": 10,
         "sku": "638723982-6",
         "description": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
-        "specs": [{},{}],
-        "features": "habitasse platea dictumst maecenas ut",
+        "specs": {"dimensions": "170 x 56 x 65 (H x W x D","capacity": "370 litres"},
+        "features": ["feature 1.1", "feature 1.2", "feature 1.3", "feature 1.4"],
         "stock": 21
       },
       {
@@ -23,8 +23,8 @@
         "price": 77,
         "sku": "942118472-6",
         "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
-        "specs": [{},{}],
-        "features": "sed tincidunt eu felis fusce",
+        "specs": {"dimensions": "170 x 56 x 65 (H x W x D","capacity": "370 litres"},
+        "features": ["feature 2.1", "feature 2.2", "feature 2.3", "feature 2.4"] ,
         "stock": 68
       },
       {
@@ -36,8 +36,8 @@
         "price": 63,
         "sku": "867478736-3",
         "description": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
-        "specs": [{},{}],
-        "features": "metus vitae ipsum aliquam non mauris morbi non lectus aliquam",
+        "specs": {"dimensions": "170 x 56 x 65 (H x W x D","capacity": "370 litres"},
+        "features": ["feature 1", "feature 2", "feature 3", "feature 4"] ,
         "stock": 73
       },
       {
@@ -49,8 +49,8 @@
         "price": 22,
         "sku": "104136714-7",
         "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.",
-        "specs": [{},{}],
-        "features": "a pede posuere nonummy integer non velit donec diam neque",
+        "specs": {"dimensions": "170 x 56 x 65 (H x W x D","capacity": "370 litres"},
+        "features": ["feature 1", "feature 2", "feature 3", "feature 4"] ,
         "stock": 32
       },
       {
@@ -62,8 +62,8 @@
         "price": 27,
         "sku": "487084025-1",
         "description": "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
-        "specs": [{},{}],
-        "features": "habitasse platea dictumst maecenas ut massa quis",
+        "specs": {"dimensions": "170 x 56 x 65 (H x W x D","capacity": "370 litres"},
+        "features": ["feature 1", "feature 2", "feature 3", "feature 4"] ,
         "stock": 48
       },
       {
@@ -75,8 +75,8 @@
         "price": 25,
         "sku": "211227217-9",
         "description": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
-        "specs": [{},{}],
-        "features": "cubilia curae donec pharetra magna vestibulum aliquet ultrices erat",
+        "specs": {"dimensions": "170 x 56 x 65 (H x W x D","capacity": "370 litres"},
+        "features": ["feature 1", "feature 2", "feature 3", "feature 4"] ,
         "stock": 70
       },
       {
@@ -88,8 +88,8 @@
         "price": 42,
         "sku": "132849105-6",
         "description": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
-        "specs": [{},{}],
-        "features": "eget semper rutrum nulla nunc purus phasellus in felis donec",
+        "specs": {"dimensions": "170 x 56 x 65 (H x W x D","capacity": "370 litres"},
+        "features": ["feature 1", "feature 2", "feature 3", "feature 4"] ,
         "stock": 61
       },
       {
@@ -101,8 +101,8 @@
         "price": 30,
         "sku": "966238357-3",
         "description": "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
-        "specs": [{},{}],
-        "features": "vel augue vestibulum ante",
+        "specs": {"dimensions": "170 x 56 x 65 (H x W x D","capacity": "370 litres"},
+        "features": ["feature 1", "feature 2", "feature 3", "feature 4"],
         "stock": 21
       },
       {
@@ -114,8 +114,8 @@
         "price": 60,
         "sku": "091916924-4",
         "description": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",
-        "specs": [{},{}],
-        "features": "nec sem duis aliquam convallis nunc proin at",
+        "specs": {"dimensions": "170 x 56 x 65 (H x W x D","capacity": "370 litres"},
+        "features": ["feature 1", "feature 2", "feature 3", "feature 4"] ,
         "stock": 21
       },
       {
@@ -127,8 +127,8 @@
         "price": 15,
         "sku": "626612962-0",
         "description": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
-        "specs": [{},{}],
-        "features": "suspendisse potenti in eleifend quam a odio in hac",
+        "specs": {"dimensions": "170 x 56 x 65 (H x W x D","capacity": "370 litres"},
+        "features": ["feature 1", "feature 2", "feature 3", "feature 4"] ,
         "stock": 76
       }
     ],
@@ -136,10 +136,5 @@
       { "id": 1,  "title": "Fridges" },
       { "id": 2,  "title": "Kettles" },
       { "id": 3,  "title": "Televisions" }
-    ],
-  "categories": [
-    { "id": 1,  "title": "Fridges" },
-    { "id": 2,  "title": "Kettles" },
-    { "id": 3,  "title": "Televisions" }
-  ]
+    ]
 }

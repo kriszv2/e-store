@@ -1,8 +1,20 @@
 .product-container{
     margin: 10px;
 }
+.product-container>h2{
+    text-align: center;
+}
 .post-header-product-info{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    
+    padding: 20px;
+}
+.product-description-container{
+    padding: 0 20px;
+}
+.finance-btns{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
 }

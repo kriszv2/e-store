@@ -2,7 +2,7 @@ import './App.css';
 import React,{useState} from "react";
 import Category from './components/category';
 import { getProducts, getCategories } from './fetcher';
-import Category_Products from './components/category_products';
+import CategoryProducts from './components/categoryProducts';
 
 function App() {
   const [categories, setCategories] = useState({errorMessage: '', data: []})
@@ -27,8 +27,9 @@ function App() {
     fetchData()
   }
 const renderProducts = () =>{
-  return products.data.map(p => 
-    <Category_Products key={p.id} id={p.id} title={p.title}/>
+  
+  return products.data.map(p => <CategoryProducts key={p.id}
+    {...p}>{p.title}</CategoryProducts>
   )
 }
 const renderCategories = () => {

@@ -30,7 +30,7 @@ nav ul{
 }
 article{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   -webkit-flex:4;
   -ms-flex: 4;
   flex:4;
