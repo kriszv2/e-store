@@ -1,7 +1,15 @@
-import './App.css';
-import React,{useState} from "react";
+import React, { useState } from 'react';
+import './index.css';
+import {BrowserRouter, Route,Routes} from "react-router-dom";
+import ProductDetails from './components/productDetails';
+import Basket from './components/basket';
+import Checkout from './components/checkout';
+import Category from './components/category';
+
+import Layout from './components/layout';
 import { getCategories } from './fetcher';
-import { Link } from 'react-router-dom';
+import Home from './components/home';
+
 
 function App() {
   const [categories, setCategories] = useState({errorMessage: '', data: []})
@@ -16,30 +24,19 @@ function App() {
     
   },[])
 
-
-
-const renderCategories = () => {
-  return categories.data.map((c) =>
-    <li key={c.id}>
-      <Link to={`categories/${c.id}`}>{c.title}</Link>
-    </li>
-  )
-}
   return (
     <>
-    <header>My Store</header>
-    <section>
-      <nav>
-        {categories.errorMessage && <div>Error: {categories.errorMessage}</div>}
-        {categories && renderCategories()}
-      
-      </nav>
-      <h1>Products</h1>
-      
-    </section>
-    <footer>
-      Footer
-    </footer>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Layout categories={categories}/>}>
+      <Route index element={<Home/>}/>
+      <Route path='/products/:productId' element={<ProductDetails />}/>
+      <Route path='/categories/:categoryId' element={<Category/>}/>
+      <Route path='/basket' element={<Basket/>}/>
+      <Route path='/checkout' element={<Checkout/>}/>
+      </Route>
+    </Routes>
+    </BrowserRouter>
     </>
   );
 }

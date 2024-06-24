@@ -18,15 +18,15 @@ section{
   display: flex;
 }
 nav{
-  -webkit-flex: 0.5;
-  -ms-flex: 0.5;
-  flex: 0.5;
+  -webkit-flex: 0.2;
+  -ms-flex: 0.2;
+  flex: 0.2;
   background: #CCC;
   padding: 20px;
 }
-nav ul{
+nav li{
   list-style-type: none;
-  padding: 0;
+  padding: 5px;
 }
 article{
   display: grid;

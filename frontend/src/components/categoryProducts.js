@@ -4,7 +4,6 @@ import { Link, useNavigate} from "react-router-dom"
 import { CartContext } from './contexts/cartContexts'
 
 const CategoryProducts = ({id, title, features, specs,price}) => {
-  console.log(id)
   const navigate = useNavigate()
 
 const cartContext = useContext(CartContext)
@@ -32,7 +31,9 @@ const { addProduct } = cartContext
         Add to Basket
       </button>
     </div>
+    <p><Link to={`/basket`}>To basket</Link></p>
     </div>
+    
     </div>
   )
 }

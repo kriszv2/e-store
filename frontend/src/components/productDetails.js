@@ -15,7 +15,7 @@ const ProductDetails = () => {
     fetchData()
   },[productId])
 
-
+  
   return (
     <>
     <div className='product-container'>
