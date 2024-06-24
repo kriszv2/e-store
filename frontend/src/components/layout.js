@@ -25,7 +25,6 @@ function Layout({categories}) {
      {categories && renderCategories()}
    
    </nav>
-   <h1>Products</h1>
    <Outlet/> 
  </section>
  <footer>footer</footer>

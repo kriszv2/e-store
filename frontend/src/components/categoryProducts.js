@@ -24,6 +24,7 @@ const { addProduct } = cartContext
     </div>
     <div className='finance-btns'>
       <h3>&pound;{price}</h3>
+      <Link to={`/products/${id}`}></Link>
       <button onClick={()=>{navigate(`products/${id}`)}}>
         View Product Details
       </button>
